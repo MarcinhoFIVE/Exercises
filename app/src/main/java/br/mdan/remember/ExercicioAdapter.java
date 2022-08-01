@@ -18,12 +18,12 @@ import java.util.List;
 public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.ViewHolder> {
 
     Context context;
-    List<Exercicio> exercicio;
+    List<Componentes> exercicio;
 
     public ExercicioAdapter() {
     }
 
-    public ExercicioAdapter(Context context, List<Exercicio> exercicio) {
+    public ExercicioAdapter(Context context, List<Componentes> exercicio) {
         this.context = context;
         this.exercicio = exercicio;
     }
@@ -50,6 +50,9 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.View
                 intent.putExtra("FotoRemember", exercicio.get(holder.getAdapterPosition()).getPhotoExercicio());
                 intent.putExtra("TextRemember", exercicio.get(holder.getAdapterPosition()).getNomeExercicio());
                 intent.putExtra("TextDescribe", exercicio.get(holder.getAdapterPosition()).getDescExercicio());
+                intent.putExtra("FotoInicial", exercicio.get(holder.getAdapterPosition()).getPhotoInicial());
+                intent.putExtra("FotoFinal", exercicio.get(holder.getAdapterPosition()).getPhotoFinal());
+
                 context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             }
         });

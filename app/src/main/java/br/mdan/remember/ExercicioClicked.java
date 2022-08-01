@@ -27,14 +27,16 @@ public class ExercicioClicked extends AppCompatActivity {
         recebeDescribe = findViewById(R.id.tvRecebeDescribe);
 
         Intent intent = getIntent();
-        int foto;
+        int foto, fotoIni, fotoFin;
         String nome, desc;
-        foto = intent.getIntExtra("FotoRemember",0);
+//        foto = intent.getIntExtra("FotoRemember",0);
         nome = intent.getStringExtra("TextRemember");
         desc = intent.getStringExtra("TextDescribe");
+        fotoIni = intent.getIntExtra("FotoInicial",0);
+        fotoFin = intent.getIntExtra("FotoFinal",0);
 
-        recebeInicial.setImageResource(foto);
-        recebeFinal.setImageResource(foto);
+        recebeInicial.setImageResource(fotoIni);
+        recebeFinal.setImageResource(fotoFin);
         recebeWhat.setText(nome);
         recebeDescribe.setText(desc);
 

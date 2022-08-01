@@ -18,12 +18,12 @@ import java.util.List;
 public class GrupoAdapter extends RecyclerView.Adapter<GrupoAdapter.ViewHolder> {
 
     Context context;
-    List<Exercicio> grupo;
+    List<Componentes> grupo;
 
     public GrupoAdapter() {
     }
 
-    public GrupoAdapter(Context context, List<Exercicio> grupo) {
+    public GrupoAdapter(Context context, List<Componentes> grupo) {
         this.context = context;
         this.grupo = grupo;
     }
@@ -44,15 +44,10 @@ public class GrupoAdapter extends RecyclerView.Adapter<GrupoAdapter.ViewHolder> 
         holder.cardGrupo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context, grupo.get(holder.getAdapterPosition()).getNomeExercicio(), Toast.LENGTH_SHORT).show();
-                switch (holder.getAdapterPosition()) {
-                    case 0:
-                        Toast.makeText(context, "Peito", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(context, Peitoral.class);
-                        context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                        //Intent intent = new Intent(context, Peitoral.class);
-                        //context.startActivity(intent);
-                }
+                Intent intent = new Intent(context, Exercicios.class);
+                intent.putExtra("muscle", holder.getAdapterPosition());
+                context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                Toast.makeText(context, grupo.get(holder.getAdapterPosition()).getNomeExercicio(), Toast.LENGTH_SHORT).show();
             }
         });
     }

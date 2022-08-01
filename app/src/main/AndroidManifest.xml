@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Remember"
         tools:targetApi="31">
         <activity
-            android:name="br.mdan.remember.Peitoral"
+            android:name="br.mdan.remember.Exercicios"
             android:exported="true" />
         <activity
             android:name="br.mdan.remember.ExercicioClicked"

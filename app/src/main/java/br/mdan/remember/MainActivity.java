@@ -12,7 +12,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    List<Exercicio> grupoList;
+    List<Componentes> grupoList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.hasFixedSize();
         grupoList = new ArrayList<>();
-        grupoList.add(new Exercicio(R.drawable.supinoreto, "Peitoral", "Exercícios Para Peito"));
-        grupoList.add(new Exercicio(R.drawable.supinoreto, "Dorsal", "Exercícios Para Costas"));
-        grupoList.add(new Exercicio(R.drawable.supinoreto, "Membros Inferiores", "Exercício Para Pernas"));
+        grupoList.add(new Componentes(R.drawable.peitoral, "Peitoral", "Exercícios Para Peito", 0, 0));
+        grupoList.add(new Componentes(R.drawable.dorsal, "Dorsal", "Exercícios Para Costas", 0, 0));
+        grupoList.add(new Componentes(R.drawable.quadriceps, "Quadriceps", "Exercício Para Coxa", 0, 0));
 
         GrupoAdapter grupoAdapter = new GrupoAdapter(getApplicationContext(), grupoList);
         recyclerView.setAdapter(grupoAdapter);
