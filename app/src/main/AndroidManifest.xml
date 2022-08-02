@@ -18,7 +18,7 @@
             android:exported="true" />
         <activity
             android:name="br.mdan.remember.ExercicioClicked"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="br.mdan.remember.MainActivity"
             android:exported="true">

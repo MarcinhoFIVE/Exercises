@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         grupoList = new ArrayList<>();
         grupoList.add(new Componentes(R.drawable.peitoral, "Peitoral", "Exercícios Para Peito", 0, 0));
         grupoList.add(new Componentes(R.drawable.dorsal, "Dorsal", "Exercícios Para Costas", 0, 0));
-        grupoList.add(new Componentes(R.drawable.quadriceps, "Quadriceps", "Exercício Para Coxa", 0, 0));
+        grupoList.add(new Componentes(R.drawable.quadriceps, "Quadriceps", "Exercício Para Anterior de Coxa", 0, 0));
+        grupoList.add(new Componentes(R.drawable.bicepsfemural, "Bíceps Femural", "Exercício Para Posterior de Coxa", 0, 0));
 
         GrupoAdapter grupoAdapter = new GrupoAdapter(getApplicationContext(), grupoList);
         recyclerView.setAdapter(grupoAdapter);
